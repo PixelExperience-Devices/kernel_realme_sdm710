@@ -84,8 +84,7 @@ static void tcp_event_new_data_sent(struct sock *sk, const struct sk_buff *skb)
 
 	NET_ADD_STATS(sock_net(sk), LINUX_MIB_TCPORIGDATASENT,
 		      tcp_skb_pcount(skb));
-
-    oppo_app_monitor_update_app_info(sk, skb, 1);
+        oppo_app_monitor_update_app_info(sk, skb, 1);
 }
 
 /* SND.NXT, if window was not shrunk.
